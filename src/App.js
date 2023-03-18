@@ -1,7 +1,9 @@
+import CandyList from './components/CandyList';
+
 function App() {
   return (
     <div>
-      Test
+      <CandyList />
     </div>
   );
 }

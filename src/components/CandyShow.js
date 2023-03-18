@@ -1,9 +1,11 @@
+import styles from './CandyShow.module.scss'
+
 function CandyShow({ candy }) {
   return (
-    <div>
-      <div>{candy.name}</div>
-      <div>${candy.price}</div>
-    </div>
+    <li className={styles.candy}>
+      <div className={styles.name}>{candy.name}</div>
+      <div className={styles.price}>${candy.price}</div>
+    </li>
   )
 }
 

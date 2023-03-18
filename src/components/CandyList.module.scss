@@ -1,0 +1,19 @@
+.candyListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        margin-bottom: 3rem;
+        font-family: AmericanTypewriterStd-Med;
+        font-size: 3.8rem;
+        line-height: 1;
+        text-align: center;
+    }
+}
+
+.candyList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

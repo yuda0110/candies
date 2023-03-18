@@ -1,4 +1,5 @@
-import { candies } from '../conf/candies'
+import styles from './CandyList.module.scss';
+import { candies } from '../conf/candies';
 import CandyShow from './CandyShow';
 
 function CandyList() {
@@ -6,9 +7,11 @@ function CandyList() {
     return <CandyShow candy={candy} />
   });
   return (
-    <div>
+    <div className={styles.candyListContainer}>
       <h1>Candy</h1>
-      {renderedCandies}
+      <ul className={styles.candyList}>
+        {renderedCandies}
+      </ul>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import CandyShow from './CandyShow';
 
 function CandyList() {
   const renderedCandies = candies.map(candy => {
-    return <CandyShow candy={candy} />
+    return <CandyShow candy={candy} key={candy.id} />
   });
   return (
     <div className={styles.candyListContainer}>

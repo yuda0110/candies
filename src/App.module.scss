@@ -3,4 +3,16 @@
     padding: 5rem;
     display: flex;
     justify-content: center;
+
+    main {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+
+    aside {
+        width: 25rem;
+        padding-left: 3rem;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
 }

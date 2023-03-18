@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) {
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone) {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(phone-land) {
+        font-size: 50%; //1rem = 8px, 8/16 = 50%
+    }
+
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16 = 75%
+    }
+}
+
+body {
+    font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif !important;
+    -webkit-text-size-adjust: 100%; // TO prevent font-size auto enlargement on landscape by iPhone
+    overscroll-behavior: none;
+}
+
+@supports (height: 100dvh) {
+    body {
+        height: 100dvh;
+    }
+}
+
+@supports not (height: 100dvh) {
+    body {
+        height: 100vh;
+    }
+}
+
+@supports (width: 100dvw) {
+    body {
+        width: 100dvw;
+    }
+}
+
+@supports not (width: 100dvh) {
+    body {
+        width: 100vw;
+    }
+}

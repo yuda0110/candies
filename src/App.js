@@ -14,8 +14,9 @@ function App() {
     console.log('id:', event.target.id);
 
     candies.forEach(candy => {
-      if (candy.id === event.target.id) {
-        setSelectedCandy({ name: candy.name, price: candy.price });
+      const selectedId = event.target.id
+      if (candy.id === selectedId) {
+        setSelectedCandy({ name: candy.name, price: candy.price, element: document.getElementById(selectedId) });
       }
     })
 
@@ -30,6 +31,10 @@ function App() {
 
   const onSubmit = () => {
     setShowForm(false);
+
+    if (selectedCandy.element) {
+      selectedCandy.element.style.backgroundColor = null;
+    }
   }
 
   return (

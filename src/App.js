@@ -63,7 +63,7 @@ function App() {
       </main>
       <aside>
         <DropBox drop={dropHandler} />
-        <Summary />
+        <Summary candyList={addedCandies} />
       </aside>
     </div>
   );

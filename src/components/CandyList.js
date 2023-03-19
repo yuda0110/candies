@@ -14,7 +14,7 @@ function CandyList({ dragStart }) {
   });
   return (
     <div className={styles.candyListContainer}>
-      <h1>Candy</h1>
+      <h1>Create Your Custom Mix</h1>
       <ul className={styles.candyList}>
         {renderedCandies}
       </ul>

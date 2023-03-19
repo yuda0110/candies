@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import styles from './App.module.scss';
+import { candies } from './conf/candies';
 import CandyList from './components/CandyList';
 import DropBox from './components/DropBox';
-import { candies } from './conf/candies';
-import Form from "./components/Form";
+import Form from './components/Form';
+import Summary from './components/Summary';
 
 function App() {
   const [selectedCandy, setSelectedCandy] = useState(null);
@@ -50,6 +51,7 @@ function App() {
       </main>
       <aside>
         <DropBox drop={dropHandler} />
+        <Summary />
       </aside>
     </div>
   );

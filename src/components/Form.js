@@ -1,10 +1,11 @@
 import { useState } from 'react';
 
-function Form({ selectedCandyName, selectedCandyPrice }) {
+function Form({ selectedCandy, onSubmit }) {
   const [quantity, setQuantity] = useState(0);
 
   const submitHandler = event => {
     event.preventDefault();
+    onSubmit();
   }
 
   const changeHandler = event => {
@@ -13,8 +14,8 @@ function Form({ selectedCandyName, selectedCandyPrice }) {
 
   return (
     <form onSubmit={submitHandler}>
-      <div>{selectedCandyName}</div>
-      <div>${selectedCandyPrice}</div>
+      <div>{selectedCandy.name}</div>
+      <div>${selectedCandy.price}</div>
       <label>Quantity</label>
       <input
         type="number"

@@ -31,24 +31,44 @@
             font-size: 1.4rem;
         }
 
-        .input {
-            width: auto;
-            min-width: 2rem;
-            height: 3rem;
-            outline: none;
-            font-size: 1.4rem;
-            text-align: center;
-            line-height: 1;
+        .inputContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border: 1px solid $color__black;
+            font-size: 1.4rem;
+            line-height: 1;
 
-            &::-webkit-outer-spin-button,
-            &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
+            .input {
+                width: auto;
+                min-width: 2rem;
+                height: 3rem;
+                outline: none;
+                text-align: center;
+                border: none;
+                border-left: 1px solid $color__black;
+                border-right: 1px solid $color__black;
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                &[type=number]{
+                    -moz-appearance: textfield;
+                }
             }
 
-            &[type=number]{
-                -moz-appearance: textfield;
+            .increment {
+                height: 3rem;
+                width: 3rem;
+                font-size: 1.8rem;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
 

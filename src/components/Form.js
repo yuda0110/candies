@@ -18,6 +18,18 @@ function Form({ selectedCandy, onSubmit }) {
     setQuantity(event.target.value);
   }
 
+  const incrementMinus = event => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1);
+    }
+  }
+
+  const incrementPlus = event => {
+    if (quantity < 1000) {
+      setQuantity(quantity + 1);
+    }
+  }
+
   return (
     <form
       className={styles.form}
@@ -31,16 +43,24 @@ function Form({ selectedCandy, onSubmit }) {
 
       <div className={styles.formContent}>
         <label className={styles.label}>Quantity</label>
-        <input
-          className={styles.input}
-          type="number"
-          min="0"
-          max="1000"
-          value={quantity}
-          pattern="[0-9]{1,4}"
-          maxLength="4"
-          onChange={changeHandler}
-        />
+        <div className={styles.inputContainer}>
+          <span className={styles.increment} onClick={incrementMinus}>
+            -
+          </span>
+          <input
+            className={styles.input}
+            type="number"
+            min="0"
+            max="1000"
+            value={quantity}
+            pattern="[0-9]{1,4}"
+            maxLength="4"
+            onChange={changeHandler}
+          />
+          <span className={styles.increment} onClick={incrementPlus}>
+            +
+          </span>
+        </div>
         <button className={styles.button}>Add</button>
       </div>
 

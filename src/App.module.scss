@@ -15,4 +15,20 @@
         flex-grow: 0;
         flex-shrink: 0;
     }
+
+    h1, h2, h3 {
+        font-family: AmericanTypewriterStd-Med;
+        line-height: 1;
+    }
+
+    h1 {
+        margin-bottom: 3rem;
+        font-size: 3.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
 }

@@ -9,6 +9,7 @@ import Summary from './components/Summary';
 function App() {
   const [selectedCandy, setSelectedCandy] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [addedCandies, setAddedCandies] = useState([]);
 
   const dragStartHandler = event => {
     console.log('dataTransfer:', event.dataTransfer);
@@ -17,7 +18,12 @@ function App() {
     candies.forEach(candy => {
       const selectedId = event.target.id
       if (candy.id === selectedId) {
-        setSelectedCandy({ name: candy.name, price: candy.price, element: document.getElementById(selectedId) });
+        setSelectedCandy({
+          id: candy.id,
+          name: candy.name,
+          price: candy.price,
+          element: document.getElementById(selectedId)
+        });
       }
     })
 
@@ -30,8 +36,14 @@ function App() {
     setShowForm(true);
   }
 
-  const onSubmit = () => {
+  const onSubmit = newCandy => {
     setShowForm(false);
+
+    if (newCandy.quantity > 0) {
+      const updatedAddedCandies = [...addedCandies, newCandy];
+      setAddedCandies(updatedAddedCandies);
+      console.log('updatedAddedCandies:', updatedAddedCandies);
+    }
 
     if (selectedCandy.element) {
       selectedCandy.element.style.backgroundColor = null;

@@ -5,7 +5,12 @@ function Form({ selectedCandy, onSubmit }) {
 
   const submitHandler = event => {
     event.preventDefault();
-    onSubmit();
+    onSubmit({
+      id: selectedCandy.id,
+      name: selectedCandy.name,
+      price: selectedCandy.price,
+      quantity: quantity
+    });
   }
 
   const changeHandler = event => {

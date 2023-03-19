@@ -1,8 +1,75 @@
+@import "../sass/variables";
 @import "../sass/mixins";
 
 .form {
     width: 20rem;
     height: auto;
-    //z-index: 10;
-    //@include absCenter();
+    padding: 3rem;
+    background: $color__white;
+    z-index: 10;
+    @include absCenter();
+    box-shadow: $box-shadow__large;
+    border-radius: 1rem;
+
+    .candyInfo {
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .formContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .label {
+            margin: 2rem 0 .5rem;
+            text-transform: uppercase;
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        .input {
+            width: auto;
+            min-width: 2rem;
+            height: 3rem;
+            outline: none;
+            font-size: 1.4rem;
+            text-align: center;
+            line-height: 1;
+            border: 1px solid $color__black;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            &[type=number]{
+                -moz-appearance: textfield;
+            }
+        }
+
+        .button {
+            width: auto;
+            min-width: 10rem;
+            height: 4.5rem;
+            margin-top: 2rem;
+            padding: 0 2rem;
+            background: $color__black;
+            color: $color__white;
+            font-size: 1.6rem;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                background-color: $color__gold-dark;
+            }
+        }
+    }
 }

@@ -4,4 +4,13 @@ $color__white: #FFF;
 $color__gray-light: #D9D9D9;
 $color__gray-dark: #626264;
 $color__gold: #B5983D;
+$color__gold-dark: #96701b;
 $color__yellow-light: #FFF4E6FF;
+
+
+// BOX-SHADOW
+// desc) box-shadow: 左右の向きpx  上下の向きpx ぼかしpx 広がりpx 色 内側指定;
+// ex) box-shadow: 2px 2px 4px -2px gray inset
+$box-shadow__small: 0 0 3px 0 rgba(0, 0, 0, 0.16);
+$box-shadow__medium: 0 0 5px rgba(0, 0, 0, 0.16);
+$box-shadow__large: 0 0 10px rgba(0, 0, 0, 0.16);

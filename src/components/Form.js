@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import styles from './Form.module.scss';
 
 function Form({ selectedCandy, onSubmit }) {
   const [quantity, setQuantity] = useState(0);
@@ -18,18 +19,31 @@ function Form({ selectedCandy, onSubmit }) {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <div>{selectedCandy.name}</div>
-      <div>${selectedCandy.price}</div>
-      <label>Quantity</label>
-      <input
-        type="number"
-        min="0"
-        max="1000"
-        value={quantity}
-        onChange={changeHandler}
-      />
-      <button>Add</button>
+    <form
+      className={styles.form}
+      onSubmit={submitHandler}
+    >
+      <h2>Enter Quantity</h2>
+      <div className={styles.candyInfo}>
+        <div>{selectedCandy.name}</div>
+        <div>${selectedCandy.price}</div>
+      </div>
+
+      <div className={styles.formContent}>
+        <label className={styles.label}>Quantity</label>
+        <input
+          className={styles.input}
+          type="number"
+          min="0"
+          max="1000"
+          value={quantity}
+          pattern="[0-9]{1,4}"
+          maxLength="4"
+          onChange={changeHandler}
+        />
+        <button className={styles.button}>Add</button>
+      </div>
+
     </form>
   )
 }

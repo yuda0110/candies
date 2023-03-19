@@ -4,4 +4,50 @@
     margin-top: 1.5rem;
     padding: 1.5rem;
     border: 1px solid $color__black;
+
+    .candyList {
+        list-style: none;
+
+        .candy {
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            line-height: 1;
+
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+
+            .detail {
+                color: $color__gray-dark;
+                display: flex;
+                align-items: center;
+
+                .price {
+                    font-size: 1.2rem;
+                }
+
+                .quantity {
+                    display: flex;
+                    align-items: center;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+
+                    &::before {
+                        padding: 0.5rem;
+                        content: 'X';
+                        font-size: 1rem;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+
+    .total {
+        margin-top: 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
 }

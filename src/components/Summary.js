@@ -15,11 +15,12 @@ function Summary({ candyList }) {
 
   const renderedCandyList = candyList.map(candy => {
     return (
-      <li key={candy.id}>
+      <li className={styles.candy} key={candy.id}>
         <div>{candy.name}</div>
-        <div>${candy.price}</div>
-        <div>X {candy.quantity}</div>
-        <div>${candy.price * candy.quantity}</div>
+        <div className={styles.detail}>
+          <span className={styles.price}>${candy.price}</span>
+          <span className={styles.quantity}>{candy.quantity}</span>
+        </div>
       </li>
     )
   })
@@ -28,10 +29,10 @@ function Summary({ candyList }) {
     <section className={styles.summary}>
       <h2>Summary</h2>
       {candyList.length > 0 ? (
-        <div>
-          <ul>{renderedCandyList}</ul>
-          <div>Total: ${total}</div>
-        </div>
+        <>
+          <ul className={styles.candyList}>{renderedCandyList}</ul>
+          <div className={styles.total}>Total: ${total}</div>
+        </>
       ) : (
         <p>No candy in your box.</p>
       )}

@@ -45,7 +45,7 @@ function App() {
       console.log('updatedAddedCandies:', updatedAddedCandies);
     }
 
-    if (selectedCandy.element) {
+    if (newCandy.quantity <= 0 && selectedCandy.element) {
       selectedCandy.element.style.backgroundColor = null;
     }
   }
@@ -53,7 +53,7 @@ function App() {
   return (
     <div className={styles.app}>
       <main>
-        <CandyList dragStart={dragStartHandler} />
+        <CandyList dragStart={dragStartHandler} addedCandies={addedCandies} />
         {showForm && (
           <Form
             selectedCandy={selectedCandy}

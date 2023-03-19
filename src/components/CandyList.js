@@ -2,13 +2,14 @@ import styles from './CandyList.module.scss';
 import { candies } from '../conf/candies';
 import CandyShow from './CandyShow';
 
-function CandyList({ dragStart }) {
+function CandyList({ dragStart, addedCandies }) {
   const renderedCandies = candies.map(candy => {
     return (
       <CandyShow
         candy={candy}
         key={candy.id}
         dragStart={dragStart}
+        addedCandies={addedCandies}
       />
     )
   });

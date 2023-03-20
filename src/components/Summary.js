@@ -34,7 +34,7 @@ function Summary({ candyList }) {
           <div className={styles.total}>Total: ${total}</div>
         </>
       ) : (
-        <p>No candy in your box.</p>
+        <p className={styles.message}>No candy in your box.</p>
       )}
     </section>
   )

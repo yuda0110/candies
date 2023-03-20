@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/candies/static/css/main.17fca881.css",
+    "main.css": "/candies/static/css/main.264d87b4.css",
     "main.js": "/candies/static/js/main.3bf4101c.js",
     "index.html": "/candies/index.html",
-    "main.17fca881.css.map": "/candies/static/css/main.17fca881.css.map",
+    "main.264d87b4.css.map": "/candies/static/css/main.264d87b4.css.map",
     "main.3bf4101c.js.map": "/candies/static/js/main.3bf4101c.js.map"
   },
   "entrypoints": [
-    "static/css/main.17fca881.css",
+    "static/css/main.264d87b4.css",
     "static/js/main.3bf4101c.js"
   ]
 }

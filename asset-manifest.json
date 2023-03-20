@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/candies/static/css/main.438d8456.css",
+    "main.js": "/candies/static/js/main.37a3c9d2.js",
+    "index.html": "/candies/index.html",
+    "main.438d8456.css.map": "/candies/static/css/main.438d8456.css.map",
+    "main.37a3c9d2.js.map": "/candies/static/js/main.37a3c9d2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.438d8456.css",
+    "static/js/main.37a3c9d2.js"
+  ]
+}
